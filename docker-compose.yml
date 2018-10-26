@@ -1,0 +1,9 @@
+version: '3'
+services:
+  nghicv-video:
+    container_name: nghicv-video
+    image: nghicv-video
+    volumes:
+      - ./:/usr/local/video_nghicv/
+    ports:
+      - 8000:8000

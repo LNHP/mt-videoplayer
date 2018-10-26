@@ -1,0 +1,9 @@
+NAME=nghicv_video
+cd /usr/local/video_nghicv/
+pip install -r requirements.txt
+exec gunicorn video_nghicv.wsgi:application \
+    --name $NAME \
+    --bind 127.0.0.1:8000 \
+    --workers 1 \
+    --log-level debug \
+    --log-file -
